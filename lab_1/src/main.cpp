@@ -4,7 +4,9 @@
 int main() {
     CircularList<int> list;
 
-    list.push(1);
+    std::cout << list << std::endl;
+
+    list.push(10);
     list.push(2);
 
     std::cout << list << std::endl;
@@ -14,6 +16,21 @@ int main() {
     std::cout << list << std::endl;
 
     std::cout << list.find(-5)->value << std::endl;
+
+    list.bubble_sort();
+
+    std::cout << list << std::endl;
+
+    std::cout << list.find_prev(-5)->value << std::endl;
+
+    list.remove(-5);
+    std::cout << list << std::endl;
+
+    list.remove(2);
+    std::cout << list << std::endl;
+
+    list.remove(10);
+    std::cout << list << std::endl;
 
     return 0;
 }
